@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Rocket League</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="scoreboard">
+      <span id="player-label">YOU</span>
+      <span id="player-score">0</span>
+      <span class="score-separator">:</span>
+      <span id="ai-score">0</span>
+      <span id="ai-label">AI</span>
+    </div>
+
+    <div id="boost-bar-container">
+      <div id="boost-bar-fill"></div>
+    </div>
+
+    <div id="message"></div>
+
+    <div id="instructions">
+      <p><strong>Controls</strong> – W/S: Drive, A/D: Steer, Space: Jump, Shift: Boost, R: Reset ball</p>
+    </div>
+  </div>
+
+  <!-- The 3D canvas is created by Three.js -->
+  <script type="module" src="game.js"></script>
+</body>
+</html>
