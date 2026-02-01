@@ -7,27 +7,60 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- UI overlay -->
   <div id="ui">
+    <!-- Scoreboard -->
     <div id="scoreboard">
       <span id="player-label">YOU</span>
       <span id="player-score">0</span>
       <span class="score-separator">:</span>
       <span id="ai-score">0</span>
       <span id="ai-label">AI</span>
+      <span class="score-separator">|</span>
+      <span id="timer">03:00</span>
     </div>
 
+    <!-- Pause button -->
+    <button id="pause-btn" title="Pause (P)">II</button>
+
+    <!-- Boost bar -->
     <div id="boost-bar-container">
       <div id="boost-bar-fill"></div>
     </div>
 
+    <!-- Centre message (GOAL, KICK-OFF, FULL TIME) -->
     <div id="message"></div>
 
+    <!-- Instructions -->
     <div id="instructions">
-      <p><strong>Controls</strong> – W/S: Drive, A/D: Steer, Space: Jump, Shift: Boost, R: Reset ball</p>
+      <p>
+        <strong>Controls</strong> – W/S: Drive, A/D: Steer, Space: Jump, Shift: Boost, R: Reset ball, P/Esc: Pause
+      </p>
+    </div>
+
+    <!-- Car customiser -->
+    <div id="car-customiser">
+      <span>Car colour:</span>
+      <button class="car-swatch" data-colour="#4caf50" title="Green"></button>
+      <button class="car-swatch" data-colour="#2196f3" title="Blue"></button>
+      <button class="car-swatch" data-colour="#ff9800" title="Orange"></button>
+      <button class="car-swatch" data-colour="#9c27b0" title="Purple"></button>
+    </div>
+
+    <!-- Pause overlay -->
+    <div id="pause-overlay">
+      <div id="pause-panel">
+        <h2>Paused</h2>
+        <p>Press <strong>P</strong> or <strong>Esc</strong> to resume, or use the buttons below.</p>
+        <div class="pause-buttons">
+          <button id="resume-btn">Resume</button>
+          <button id="restart-btn">Restart Match</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- The 3D canvas is created by Three.js -->
+  <!-- Three.js game -->
   <script type="module" src="game.js"></script>
 </body>
 </html>
